@@ -1,4 +1,4 @@
-package com.robranf.GuessGame;
+package com.robranf.guess_game;
 
 public class GuessGame {
     Player p1;

@@ -1,4 +1,4 @@
-package com.robranf.BottleSong;
+package com.robranf.bottle_song;
 
 public class BottleSong {
     public static void main(String[] args) {
