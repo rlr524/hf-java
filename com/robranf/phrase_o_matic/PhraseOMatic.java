@@ -1,4 +1,4 @@
-package com.robranf.PhraseOMatic;
+package com.robranf.phrase_o_matic;
 
 import java.util.Random;
 
