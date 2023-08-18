@@ -1,9 +1,14 @@
 package com.robranf.sink_a_startup;
 
-public class Startup {
-    private int[] locationCells;
-    private int numberOfHits = 0;
+import java.util.ArrayList;
 
+public class Startup {
+    private ArrayList<String> locationCells;
+    // private int numberOfHits = 0;
+
+    public void setLocationCells(ArrayList<String> locs) {
+        locationCells = locs;
+    }
     /*
     METHOD String checkYourself(int userGuess)
         GET the user guess as an int parameter
@@ -20,36 +25,19 @@ public class Startup {
         END REPEAT
     END METHOD
     */
-    public String checkYourself(int userGuess) {
+    public String checkYourself(String userGuess) {
         String result = "Miss";
+        int index = locationCells.indexOf(userGuess);
 
-        for (int cell : locationCells) {
-            if (userGuess == cell) {
+        if (index >= 0) {
+            locationCells.remove(index);
+
+            if (locationCells.isEmpty()) {
+                result = "Kill";
+            } else {
                 result = "Hit";
-                numberOfHits++;
-                break;
             }
         }
-        if (numberOfHits == locationCells.length) {
-            result = "Kill";
-        }
-        System.out.println(result);
         return result;
-    }
-
-    public int[] getLocationCells() {
-        return locationCells;
-    }
-
-    public void setLocationCells(int[] locationCells) {
-        this.locationCells = locationCells;
-    }
-
-    public int getNumberOfHits() {
-        return numberOfHits;
-    }
-
-    public void setNumberOfHits(int numberOfHits) {
-        this.numberOfHits = numberOfHits;
     }
 }

@@ -1,5 +1,6 @@
 package com.robranf.sink_a_startup;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
         Startup startup = new Startup();
 
         Random rand = new Random();
-        int randomNum = rand.nextInt(5);
+        int randomNum = rand.nextInt(6);
 
         int[] locations = {randomNum, randomNum + 1, randomNum + 2};
         startup.setLocationCells(locations);
