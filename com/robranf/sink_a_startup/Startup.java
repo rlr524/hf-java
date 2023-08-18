@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Startup {
     private ArrayList<String> locationCells;
     // private int numberOfHits = 0;
+    private String name;
 
     public void setLocationCells(ArrayList<String> locs) {
         locationCells = locs;
@@ -39,5 +40,13 @@ public class Startup {
             }
         }
         return result;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

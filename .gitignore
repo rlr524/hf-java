@@ -1,6 +1,3 @@
-# IDE
-*.iml
-
 # Compiled class file
 /out
 *.class
