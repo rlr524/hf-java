@@ -10,6 +10,10 @@ public class Startup {
     public void setLocationCells(ArrayList<String> locs) {
         locationCells = locs;
     }
+
+    public void setName(String n) {
+        name = n;
+    }
     /*
     METHOD String checkYourself(int userGuess)
         GET the user guess as an int parameter
@@ -40,13 +44,5 @@ public class Startup {
             }
         }
         return result;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

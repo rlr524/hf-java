@@ -7,12 +7,6 @@ public class StartupBust {
     private ArrayList<Startup> startups = new ArrayList<>();
     private int numberOfGuesses = 0;
 
-    public static void main(String[] args) {
-        StartupBust game = new StartupBust();
-        game.setUpGame();
-        game.startPlaying();
-    }
-
     public void setUpGame() {
         // Make some start-ups and give them locations
         Startup one = new Startup();
@@ -37,7 +31,7 @@ public class StartupBust {
 
     public void startPlaying() {
         while (!startups.isEmpty()) {
-            String userGuess = String.valueOf(helper.getUserInput("Enter a guess"));
+            String userGuess = helper.getUserInput("Enter a guess");
             checkUserGuess(userGuess);
         }
         finishGame();
